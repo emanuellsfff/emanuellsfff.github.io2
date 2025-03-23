@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensaje para Marielis</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 15%;
+            background-color: #fff3e0;
+        }
+        h1 {
+            color: #d84315;
+        }
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        #si {
+            background-color: #4caf50;
+            color: white;
+        }
+        #si:hover {
+            background-color: #388e3c;
+        }
+        #no {
+            background-color: #e53935;
+            color: white;
+            position: absolute;
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Me perdonas, Marielis? Yo sé que siempre me vas a recordar el pasado, pero yo te quiero 😊</h1>
+    <div class="container">
+        <button id="si" onclick="mostrarMensaje()">Sí</button>
+        <button id="no" onmouseover="moverNo()">No</button>
+    </div>
+
+    <script>
+        function mostrarMensaje() {
+            alert("Gracias por perdonarme, QUESA. Te amo mucho y me tomé el tiempo de programar esto 🤍");
+        }
+
+        function moverNo() {
+            let botonNo = document.getElementById("no");
+            let maxWidth = window.innerWidth - botonNo.clientWidth;
+            let maxHeight = window.innerHeight - botonNo.clientHeight;
+            let x = (Math.random() * maxWidth) - (maxWidth / 2);
+            let y = (Math.random() * maxHeight) - (maxHeight / 2);
+            botonNo.style.transform = `translate(${x}px, ${y}px)`;
+        }
+    </script>
+</body>
+</html>
